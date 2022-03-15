@@ -1,18 +1,98 @@
-@mixin svg-fix {
-    width : 20px;
-    height: 20px;   
+@mixin line{
+    height: 12px;
+    border-left: 2px solid black;
 }
 .tophead {
     display: flex;
-    justify-content: space-around;
+    font-size: 10px;
+    width: 60%;
+    .container {
+        width: 100%;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+
+
+    .logo {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: flex-end;
+        // width: 10%;
+
+        .first {
+            font-size: 24px;
+            white-space: nowrap;
+        }
+
+        .second {
+            color: red;
+        }
+
+        .third {
+            font-size: smaller;
+        }
+    }
+    .languages {
+        display: flex;
+        flex-basis: 5%;
+        justify-content: space-between;
+
+        
+
+        .line {
+            height: 12px;
+            border-left: 2px solid black;
+        }
+    }
+    
     .icons {
         display: flex;
         justify-content: space-between;
+        align-items: flex-start;
+        width: 15%;
+
+        
+        .badge {
+            position: absolute;
+            display: inline-block;
+            width: 8px;
+            height: 8px;
+            border-radius: 50%;
+            top: 12px;
+            right: 470px;
+            background-color: red;
+        }
+        .settings {
+            margin-left: -8px;
+        }
+
+        .little-line {
+            height: 16px;
+            border-left: 1px solid rgb(175, 172, 171);
+            transform: translateY(8px);
+        }
+
+        .big-line {
+            align-self: stretch;
+            border-left: 1px solid rgb(175, 172, 171);
+            transform: translateY(-5px);
+        }
 
         .beil,
         .settings {
-            @include svg-fix();
+            width : 20px;
+            height: 20px; 
+            transform: translateY(5px);
+        }
+        .power {
+            width: 35px;
+            height: 35px;
+            align-self: center;
+            transform: translateY(-5px);
         }
     }
+
+}
 
 }

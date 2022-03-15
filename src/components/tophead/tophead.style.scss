@@ -1,0 +1,18 @@
+@mixin svg-fix {
+    width : 20px;
+    height: 20px;   
+}
+.tophead {
+    display: flex;
+    justify-content: space-around;
+    .icons {
+        display: flex;
+        justify-content: space-between;
+
+        .beil,
+        .settings {
+            @include svg-fix();
+        }
+    }
+
+}
